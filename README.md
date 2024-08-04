@@ -7,7 +7,6 @@ StudyPlus es un asistente virtual para estudiantes diseñado para ayudar a gesti
 - [Descripción del Proyecto](#descripción-del-proyecto)
 - [Instrucciones de Instalación](#instrucciones-de-instalación)
 - [Uso](#uso)
-- [Licencia](#licencia)
 
 
 ## Instrucciones de Instalación
