@@ -1,0 +1,35 @@
+digraph G {
+    graph [ranksep=1.5, nodesep=0.8];  // Ajustar la separación entre los nodos
+    node [shape=ellipse, style=filled, fillcolor=lightblue, color=black, fontname="Arial", fontsize=12];
+    edge [color=black, fontname="Arial", fontsize=10, labelfontsize=10, labeldistance=2.5];  // Ajuste de las etiquetas
+
+    Inicio -> Tokenization [label="1", fontsize=10, labeldistance=2.5];
+    Tokenization -> ConceptExtraction [label="2", fontsize=10, labeldistance=2.5];
+    ConceptExtraction -> Segmentation [label="3", fontsize=10, labeldistance=2.5];
+    Segmentation -> DifficultyEvaluation [label="4", fontsize=10, labeldistance=2.5];
+    DifficultyEvaluation -> StudyMethodAssignment [label="5", fontsize=10, labeldistance=2.5];
+    StudyMethodAssignment -> Result [label="6", fontsize=10, labeldistance=2.5];
+    
+    subgraph cluster_0 {
+        label = "Proceso de División y Asignación de Métodos de Estudio";
+        style=filled;
+        color=lightgrey;
+        fontsize=14;
+        fontname="Arial";
+        node [style=filled, color=lightblue, fontname="Arial", fontsize=12];
+        
+        Tokenization -> ConceptExtraction [label="Extraer Conceptos", fontsize=10, labeldistance=2.5];
+        ConceptExtraction -> Segmentation [label="Segmentar en Bloques", fontsize=10, labeldistance=2.5];
+        Segmentation -> DifficultyEvaluation [label="Evaluar Dificultad", fontsize=10, labeldistance=2.5];
+        DifficultyEvaluation -> StudyMethodAssignment [label="Asignar Método de Estudio", fontsize=10, labeldistance=2.5];
+        StudyMethodAssignment -> Result [label="Bloques con Métodos", fontsize=10, labeldistance=2.5];
+    }
+
+    // Definir los nodos para mejorar su posicionamiento
+    Tokenization [label="Tokenización"];
+    ConceptExtraction [label="Extracción de Conceptos"];
+    Segmentation [label="Segmentación del Texto"];
+    DifficultyEvaluation [label="Evaluación de Dificultad"];
+    StudyMethodAssignment [label="Asignación de Métodos de Estudio"];
+    Result [label="Bloques de Texto con Métodos"];
+}
